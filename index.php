@@ -10,7 +10,7 @@ $update = $telegram->getWebhookUpdates();
 $users_id = $update['message']['chat']['id'];
 $users_sticker = $update['message']['sticker']['file_id'];
 
-if (!empty($users_sticker)) {
+if (isset($users_sticker)) {
     $telegram->sendMessage([
         'chat_id' => $users_id,
         'text' => "Your ID🔽",
