@@ -13,7 +13,7 @@ $users_sticker = $update['message']['sticker']['thumb']['file_id'];
 if (!empty($users_sticker)) {
     $telegram->sendMessage([
         'chat_id' => $users_id,
-        'text' => "Yours ID🔽",
+        'text' => "Your ID🔽",
     ]); sleep(1);
     $telegram->sendMessage([
         'chat_id' => $users_id,
