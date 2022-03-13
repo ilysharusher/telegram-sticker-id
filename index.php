@@ -8,7 +8,7 @@ $telegram = new Api('5136673433:AAHwU9f45DYrmPGey_ILujW_JIz6WbFeUtU');
 $update = $telegram->getWebhookUpdates();
 
 $users_id = $update['message']['chat']['id'];
-$users_sticker = $update['message']['sticker']['thumb']['file_id'];
+$users_sticker = $update['message']['sticker']['file_id'];
 
 if (!empty($users_sticker)) {
     $telegram->sendMessage([
