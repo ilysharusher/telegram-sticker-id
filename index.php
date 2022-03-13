@@ -14,7 +14,7 @@ $users_sticker = $update['message']['sticker']['file_id'];
 if (isset($users_sticker)) {
     $telegram->sendMessage([
         'chat_id' => $users_id,
-        'text' => "Your ID🔽",
+        'text' => "Your sticker ID🔽",
     ]);
     sleep(1);
     $telegram->sendMessage([
