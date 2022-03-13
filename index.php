@@ -22,16 +22,22 @@ if (isset($users_sticker)) {
         'text' => $users_sticker,
     ]);
 
+} elseif ($users_text == '/start') {
+    $telegram->sendMessage([
+        'chat_id' => $users_id,
+        'text' => "Hi! I'm waiting for your choice 🤔"
+    ]);
+
 } elseif ($users_text == '/info') {
     $telegram->sendMessage([
         'chat_id' => $users_id,
-        'text' => "Just sent me any sticker, no more😉" . PHP_EOL . PHP_EOL . 
+        'text' => "Just sent me any sticker, no more 😉" . PHP_EOL . PHP_EOL . 
     "This bot made with love by @ilysharusherrr" . PHP_EOL . 
-    "I hope this one will be useful for you❤️"
+    "I hope this one will be useful for you ❤️"
     ]);
 } else {
     $telegram->sendMessage([
         'chat_id' => $users_id,
-        'text' => "Send please only sticker😑",
+        'text' => "Send please only sticker 😑",
     ]);
 }
