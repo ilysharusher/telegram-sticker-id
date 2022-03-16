@@ -4,7 +4,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 use Telegram\Bot\Api;
 
-$telegram = new Api('5215493558:AAEQLgSPYnwyjBRKMF6_KvSnz1Oy42020sA');
+$telegram = new Api('bot-token');
 $update = $telegram->getWebhookUpdates();
 
 $users_id = $update['message']['chat']['id'];
